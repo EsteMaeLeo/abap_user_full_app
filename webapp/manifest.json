@@ -69,10 +69,14 @@
           "bundleName": "manageus.manageusers.i18n.i18n"
         }
       },
-      "": {
+      "odataService": {
         "dataSource": "mainService",
         "preload": true,
-        "settings": {}
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false
+        }
       }
     },
     "resources": {

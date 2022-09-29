@@ -1,7 +1,62 @@
 <mvc:View controllerName="manageus.manageusers.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+        
+            <Table id="usersTable"  items="{odataService>/Users}"
+                    mode="SingleSelectMaster"
+                    alternateRowColors="true">
+                
+                <columns>
+                    <Column>
+                        <header>
+                            <Label text="{i18n>userId}"/> 
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Label text="{i18n>fullName}"/> 
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Label text="{i18n>type}"/> 
+                        </header>
+                    </Column>     
+                    <Column>
+                        <header>
+                            <Label text="{i18n>class}"/> 
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Label text="{i18n>creator}"/> 
+                        </header>
+                    </Column> 
+                    <Column>
+                        <header>
+                            <Label text="{i18n>creationDate}"/> 
+                        </header>
+                    </Column>  
+                    <Column>
+                        <header>
+                            <Label text="{i18n>status}"/> 
+                        </header>
+                    </Column>                                 
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{odataService>UserId}" /> 
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+        </content>
+
     </Page>
 </mvc:View>
