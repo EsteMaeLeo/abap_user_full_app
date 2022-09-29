@@ -5,7 +5,7 @@
     <Page id="page" title="{i18n>title}">
         <content>
         
-            <Table id="usersTable"  items="{odataService>/Users}"
+            <Table id="usersTable"  items="{odataService>/UserSet}"
                     mode="SingleSelectMaster"
                     alternateRowColors="true">
                 
